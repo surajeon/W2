@@ -1,14 +1,25 @@
-const sentence = "hello there from lighthouse labs\n";
+const sentence = "hello there from lighthouse labs";
 
-let holdTime = 50;
+// let holdTime = 50;
+// for (const char of sentence) {
+//   setTimeout(() => {
+//     process.stdout.write(char);
+//   }, holdTime);
+//   holdTime += 50;
+// }
+let time = 0;
 for (const char of sentence) {
   setTimeout(() => {
-    // process.stdout.write(char);
-    console.log(char);
-  }, holdTime);
-  holdTime += 50;
+    process.stdout.write(char);
+  }, time)
+  time += 100;
 }
-console.log(holdTime);
+  setTimeout(() => {
+  process.stdout.write('\n');
+}, sentence.length * 100)
+
+
+// console.log(holdTime);
 
 
 
